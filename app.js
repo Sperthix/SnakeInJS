@@ -168,7 +168,6 @@ function snake(){
 function randomSpot(){
     let x = Math.floor(Math.random() * velkostX) * snakeSize;
     let y = Math.floor(Math.random() * velkostY) * snakeSize;
-    console.log(x, y);
     if (chvost.length > 0)
     {
         chvost.forEach(cast => {
