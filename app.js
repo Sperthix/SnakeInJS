@@ -1,5 +1,6 @@
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
+const showScore = document.querySelector('.score');
 
 const snakeSize = 30;
 let snakeSpeed = snakeSize;
@@ -32,7 +33,7 @@ function gameloop() {
     if ((snakePosX === foodPosX) && (snakePosY === foodPosY)){
         score++;
         randomSpot();
-        console.log(score);
+        showScore.textContent = score;
     }
 
     render();
@@ -121,6 +122,6 @@ function randomSpot(){
 }
 
 
-
+randomSpot();
 render();
 gameloop();
